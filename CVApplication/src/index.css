@@ -1,1 +1,83 @@
 @import "tailwindcss";
+
+:root {
+  --primary-color: #242424;
+}
+
+.primaryBG {
+  background-color: var(--primary-color);
+}
+
+.primaryFontColor {
+  color: var(--primary-color);
+}
+
+h1,
+h2,
+label {
+  color: white;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+.baseSectionStyles {
+  width: 30%;
+  height: 60vh;
+  margin: 12.5vh 0;
+  border-radius: 3vh;
+  border: 1px solid black;
+  box-shadow: 0 0 10px 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  > :first-child {
+    margin-top: 2vh;
+    margin-left: 0;
+    align-self: center;
+    font-weight: bold;
+  }
+
+  :last-child {
+    margin-bottom: 2vh;
+  }
+}
+
+input {
+  width: 20vw;
+  margin-left: 0;
+}
+
+form {
+  align-self: center;
+}
+
+label {
+  margin-bottom: -3vh;
+}
+
+.ex {
+  label {
+    margin-bottom: 1px;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .baseSectionStyles {
+    margin: 5vh;
+    width: 75vw;
+    height: 75vh;
+  }
+
+  input {
+    width: 40vw;
+  }
+}
