@@ -1,7 +1,4 @@
 # React Projects
-
-    ##CV-Application
-
-    ##Memory-Card
-
-    ##Shopping-Cart
+## CV-Application  
+## Memory-Card  
+## Shopping-Cart
