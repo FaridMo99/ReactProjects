@@ -1,20 +1,25 @@
-// eslint-disable-next-line no-unused-vars
 import { useState } from "react";
 import Header from "./components/header.jsx";
 import MainSection from "./components/mainSection.jsx";
+import CVResult from "./components/CVResult.jsx";
 
 function App() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({}); // Store form data for CVResult
+
+  const handleFormSubmit = (data) => {
+    setFormData(data); // Save form data
+    setIsSubmitted(true);
+  };
+
   return (
     <>
       <Header />
-      <MainSection />
+      <MainSection  onSubmit={handleFormSubmit} />
+      {isSubmitted && <CVResult data={formData} />}
     </>
+
   );
 }
 
 export default App;
-
-/*
-Push the results and deploy them with any of the options mentioned below. 
-At this point of the curriculum, it doesn’t matter which platform you choose as long as your project is live on the internet! 
-*/

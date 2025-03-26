@@ -4,6 +4,10 @@
   --primary-color: #242424;
 }
 
+body {
+  background-color: var(--primary-color);
+}
+
 .primaryBG {
   background-color: var(--primary-color);
 }
@@ -79,5 +83,11 @@ label {
 
   input {
     width: 40vw;
+  }
+}
+
+@media print {
+  button{
+    display: none;
   }
 }
