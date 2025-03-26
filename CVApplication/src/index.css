@@ -87,7 +87,7 @@ label {
 }
 
 @media print {
-  button{
+  button {
     display: none;
   }
 }
