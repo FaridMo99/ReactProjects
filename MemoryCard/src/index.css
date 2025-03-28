@@ -1,1 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 @import "tailwindcss";
+
+:root {
+  --primaryColorBg: #fc9e7b;
+  --secondaryColorBg: #ff5349;
+  --fontMainColor: #8a2a3a;
+  --fontSecondaryColor: #723d46;
+  --customFont: "Fuzzy Bubbles", sans-serif;
+}
+
+.primaryBg {
+  background-color: var(--primaryColorBg);
+}
+
+.secondaryBg {
+  background-color: var(--secondaryColorBg);
+}
+
+.fontMain {
+  color: var(--fontMainColor);
+}
+
+.fontSecond {
+  color: var(--fontSecondaryColor);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--customFont);
+}
+
+.customGrid {
+  margin: 10vh 0;
+  padding: 0 3vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 3vw;
+}
+
+.customHover {
+  transition: transform 0.2s linear;
+  box-shadow: inset 0 0 1vw 0.1vw black;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    box-shadow:
+      inset 0 0 1vw 0.1vw black,
+      0 0 2vw 0.5vw var(--fontMainColor);
+    transform: scale(1.01);
+  }
+}
+
+.cardVisual {
+  box-shadow: inset 0 0 2vw 0.1vw white;
+}
