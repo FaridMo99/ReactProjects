@@ -1,10 +1,9 @@
-import React from "react";
+function Scoreboard({score = 0, highscore = 0}) {
 
-function Scoreboard() {
   return (
     <h2 className="font-bold flex flex-col justify-evenly">
-      <span>Your Score:</span>
-      <span>Highscore:</span>
+      <span>Your Score:{score}</span>
+      <span>Highscore:{highscore}</span>
     </h2>
   );
 }
