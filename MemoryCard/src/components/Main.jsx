@@ -1,23 +1,21 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
-import useFetchPokemons from "./useFetchPokemons"
+import useFetchPokemons from "./useFetchPokemons";
 
-function Main({ cardAmount, click, rerender}) {
+function Main({ cardAmount, click, rerender }) {
   const [pokemons, setPokemons] = useState([]);
-  const allPokemons = useFetchPokemons()
+  const allPokemons = useFetchPokemons();
 
   useEffect(() => {
-    if(allPokemons.length > 0){
-        const randomPokemons = [];
-        for (let i = 0; i < cardAmount; i++) {
-          const randomInteger = Math.floor(
-            Math.random() * allPokemons.length,
-          );
-          randomPokemons.push(allPokemons[randomInteger].name);
-        }
-        setPokemons(randomPokemons);
-      }}
-  , [cardAmount, rerender, allPokemons]);
+    if (allPokemons.length > 0) {
+      const randomPokemons = [];
+      for (let i = 0; i < cardAmount; i++) {
+        const randomInteger = Math.floor(Math.random() * allPokemons.length);
+        randomPokemons.push(allPokemons[randomInteger].name);
+      }
+      setPokemons(randomPokemons);
+    }
+  }, [cardAmount, rerender, allPokemons]);
 
   return (
     <main className="w-full customGrid">

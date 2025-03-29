@@ -10,7 +10,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [highscore, setHighscore] = useState(0);
   const [clickedPokemons, setClickedPokemons] = useState([]);
-  const[rerender, setRerender] = useState(false)
+  const [rerender, setRerender] = useState(false);
 
   const clickHandler = (e) => {
     const clickedPokemon = e.currentTarget.id;
@@ -28,7 +28,7 @@ function App() {
       });
 
       setClickedPokemons((prevClicked) => [...prevClicked, clickedPokemon]);
-      setRerender(pre=> !pre)
+      setRerender((pre) => !pre);
     }
   };
 
@@ -41,7 +41,11 @@ function App() {
         />
         <Scoreboard score={score} highscore={highscore} />
       </Header>
-      <Main cardAmount={amountOfCards} rerender={rerender} click={clickHandler} />
+      <Main
+        cardAmount={amountOfCards}
+        rerender={rerender}
+        click={clickHandler}
+      />
       <Footer />
     </>
   );
