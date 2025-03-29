@@ -1,5 +1,4 @@
-function Scoreboard({score = 0, highscore = 0}) {
-
+function Scoreboard({ score = 0, highscore = 0 }) {
   return (
     <h2 className="font-bold flex flex-col justify-evenly">
       <span>Your Score:{score}</span>

@@ -1,29 +1,28 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
+import useFetchPokemons from "./useFetchPokemons"
 
-function Main({ cardAmount, click }) {
+function Main({ cardAmount, click, rerender}) {
   const [pokemons, setPokemons] = useState([]);
+  const allPokemons = useFetchPokemons()
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000")
-      .then((response) => response.json())
-      .then((pokemonObject) => {
+    if(allPokemons.length > 0){
         const randomPokemons = [];
         for (let i = 0; i < cardAmount; i++) {
           const randomInteger = Math.floor(
-            Math.random() * pokemonObject.results.length,
+            Math.random() * allPokemons.length,
           );
-          randomPokemons.push(pokemonObject.results[randomInteger].name);
+          randomPokemons.push(allPokemons[randomInteger].name);
         }
         setPokemons(randomPokemons);
-      })
-      .catch((error) => console.error("Error fetching Pokémon:", error));
-  }, [cardAmount]);
+      }}
+  , [cardAmount, rerender, allPokemons]);
 
   return (
     <main className="w-full customGrid">
       {pokemons.map((pokemonName) => (
-        <Card name={pokemonName} key={pokemonName} click={click}/>
+        <Card name={pokemonName} key={crypto.randomUUID()} click={click} />
       ))}
     </main>
   );

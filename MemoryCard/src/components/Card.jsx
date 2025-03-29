@@ -13,7 +13,11 @@ function Card({ name, click }) {
   }, [name]);
 
   return (
-    <section onClick={click}  className={`${name} rounded-lg h-[35vh] secondaryBg flex flex-col items-center justify-evenly customHover`}>
+    <section
+      onClick={click}
+      id={name}
+      className="rounded-lg h-[35vh] secondaryBg flex flex-col items-center justify-evenly customHover"
+    >
       <div className="flex justify-center align-middle rounded-lg primaryBg w-4/5 h-[60%] cardVisual">
         <img src={sprite} alt={name} />
       </div>
