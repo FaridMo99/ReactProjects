@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+.hamburgerButton {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .hamburgerButton {
+    display: inline-block;
+  }
+}

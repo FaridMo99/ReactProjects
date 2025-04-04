@@ -1,5 +1,11 @@
+import HamburgerButton from "./components/HamburgerButton";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <HamburgerButton />
+    </>
+  );
 }
 
 export default App;

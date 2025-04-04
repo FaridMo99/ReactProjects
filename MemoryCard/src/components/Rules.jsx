@@ -2,7 +2,7 @@ function Rules(props) {
   const rules = Object.values(props);
 
   return (
-    <div className="font-bold">
+    <div className=" rules font-bold">
       <h3>Rules:</h3>
       <ol>
         {rules.map((e, index) => {
