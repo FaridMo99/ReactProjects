@@ -1,11 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import "tailwindcss";
+
+
+:root {
+  --bgPrimary:#161B40;
+  --bgSecondary:#F1FAEE;
+  --fontFamily:"Roboto", sans-serif;
+  --active:#61DAFB;
+}
+
+*{
+  font-family: var(--fontFamily);
+}
+
+/*own classes*/
+
+.bgPrimary{
+    background-color: var(--bgPrimary);
+}
+
+.bgSecondary{
+  background-color: var(--bgSecondary);
+}
+
+.fontPrimary{
+  color:var(--bgPrimary);
+}
+
+.fontSecondary{
+  color:var(--bgSecondary);
+}
+
+
+
+.active{
+  color:var(--active);
+}
+
+
+
+
+/**/
+
 
 .hamburgerButton {
   display: none;
+
+  &:hover{
+    background-color: gray;
+    border-radius: 3px;
+  }
 }
 
-@media (max-width: 400px) {
+li{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-weight: bold;
+    &:hover{
+      opacity: 0.8;
+      cursor: pointer;
+    }
+}
+
+.card {
+  box-shadow: 0 0 10px 1px grey;
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 500px) {
   .hamburgerButton {
     display: inline-block;
+  }
+
+  .link{
+    display: none;
   }
 }

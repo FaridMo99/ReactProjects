@@ -11,10 +11,13 @@ function HamburgerButton() {
 
   return (
     <>
-      <div className="hamburgerButton absolute right-0 top-0 z-20" onClick={clickHandler}>
+      <div
+        className="hamburgerButton z-20"
+        onClick={clickHandler}
+      >
         {open ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
-      <HamburgerMenu open={open} />
+      <HamburgerMenu open={open} setOpen={setOpen}/>
     </>
   );
 }
