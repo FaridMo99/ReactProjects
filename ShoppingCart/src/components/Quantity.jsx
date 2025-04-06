@@ -14,7 +14,7 @@ function Quantity() {
     setAmount;
   };
   return (
-    <div className="bg-white border-1  fontPrimary">
+    <div className="bg-white border-1 fontPrimary">
       <button onClick={clickHandler} className="sub border-r-1 w-[1vw]">
         -
       </button>
