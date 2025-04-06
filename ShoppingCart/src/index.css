@@ -48,6 +48,10 @@
   }
 }
 
+#iconAmount {
+  color: white;
+}
+
 li {
   padding-bottom: 10px;
   padding-top: 10px;
