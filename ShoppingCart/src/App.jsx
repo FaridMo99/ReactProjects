@@ -1,16 +1,10 @@
-import { Outlet } from "react-router-dom";
-import Footer from "./components/Footer";
-import HamburgerButton from "./components/HamburgerButton";
-import Navbar from "./components/Navbar";
+import { RouterProvider } from "react-router-dom";
+import routes from "./routes/router";
 
 function App() {
   return (
     <>
-      <Navbar>
-        <HamburgerButton/>
-      </Navbar>
-      <Outlet />
-      <Footer/>
+      <RouterProvider router={routes} />
     </>
   );
 }
