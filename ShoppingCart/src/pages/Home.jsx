@@ -17,6 +17,7 @@ function Home({ amount = 20 }) {
       <div className="mainLayout">
         {loading && <p>Loading...</p>}
         {error && <p>Error</p>}
+        {!loading && data.length === 0 && <p>Items not found</p>}
 
         {!loading &&
           !error &&
